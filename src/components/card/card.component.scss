@@ -1,0 +1,53 @@
+.btn-action {
+    position: absolute;
+    width: fit-content;
+    top: 35%;
+    right: 1%;
+
+}
+
+.btn-action .mat-fab {
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #FEFEFE;
+
+    &::ng-deep .mat-button-wrapper{
+        padding: 0;
+
+        .mat-icon {
+            padding: 0px 0 3px 0;
+            color: #999999;
+        }
+    }
+}
+
+span.mat-button-wrapper {
+    padding: 0 !important;
+}
+
+.mat-card {
+    margin-bottom: 40px;
+}
+
+.mat-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.mat-card-image:first-child {
+    height: 20vh;
+    object-fit: cover;
+}
+
+.mat-card-title:not(:first-child) {
+    margin-top: 10px;
+}
+
+.mat-card-content .profile .mat-icon-button {
+    margin-left: -10px;
+}
+
+.profile .username {
+    color: #59b2f2;
+}
