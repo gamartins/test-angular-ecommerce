@@ -26,6 +26,7 @@ export class FormComponent implements OnInit {
 
   initForm() {
     this.form = this.formBuilder.group({
+      id: [ ],
       name: [ '', Validators.required ],
       description: [ '', Validators.required ],
       author: [ '', Validators.required ],
@@ -36,6 +37,7 @@ export class FormComponent implements OnInit {
     if(!this.data)
       return
 
+    this.form.get('id').setValue(this.data.id)
     this.form.get('name').setValue(this.data.name)
     this.form.get('description').setValue(this.data.description)
     this.form.get('author').setValue(this.data.author)
