@@ -1,0 +1,27 @@
+<form [formGroup]="form">
+  <mat-form-field>
+    <input matInput placeholder="Nome" formControlName="name">
+    <mat-error *ngIf="form.controls.name.invalid">O campo email não é inválido</mat-error>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <textarea matInput placeholder="Descrição" rows="4" formControlName="description"></textarea>
+    <mat-error *ngIf="form.controls.description.invalid">O campo descrição não é inválido</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Autor" formControlName="author">
+    <mat-error *ngIf="form.controls.author.invalid">O campo autor não é inválido</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary"
+    [disabled]="form.invalid"
+    (click)="save()">
+      Salvar
+  </button>
+  <button
+    mat-button color="primary"
+    (click)="cancel()">
+      Cancelar
+  </button>
+</form>

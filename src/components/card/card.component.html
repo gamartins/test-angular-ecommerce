@@ -2,20 +2,20 @@
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <div class="btn-action">
     <button mat-fab>
-      <mat-icon>edit</mat-icon>
+      <mat-icon (click)="edit()">edit</mat-icon>
     </button>
     <button mat-fab>
-      <mat-icon>close</mat-icon>
+      <mat-icon (click)="remove()">close</mat-icon>
     </button>
   </div>
-  <mat-card-title>Material Design Card - For Blog Post Title</mat-card-title>
+  <mat-card-title>{{ post.name }}</mat-card-title>
   <mat-card-content>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestias sed repellat...
+      {{ post.description }}
     <div class="profile">
       <button mat-icon-button>
         <mat-icon>account_circle</mat-icon>
       </button>
-      By <span class="username">John Doe</span>
+      By <span class="username">{{ post.author }}</span>
     </div>
   </mat-card-content>
 </mat-card>

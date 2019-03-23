@@ -3,11 +3,15 @@
     <span>My Menu</span>
     <span class="example-spacer"></span>
     <button mat-button>
-      <mat-icon>add_box</mat-icon>
+      <mat-icon (click)="openForm()">add_box</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="space-evenly start">
-  <app-card fxFlex="21%" *ngFor="let item of list"></app-card>
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="star start" fxLayoutGap="4%" class="content">
+  <app-card fxFlex="21%" *ngFor="let item of list; let i = index"
+    [post]="item"
+    (editEvent)="editItem(i)"
+    (removeEvent)="removeItem(i)">
+  </app-card>
 </div>
