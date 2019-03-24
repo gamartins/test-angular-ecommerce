@@ -1,13 +1,12 @@
 .btn-action {
     position: absolute;
     width: fit-content;
-    top: 35%;
-    right: 1%;
-
+    top: 7rem;
+    right: 0.5rem;
 }
 
 .btn-action .mat-fab {
-    margin-right: 8px;
+    margin-right: 0.75rem;
     width: 40px;
     height: 40px;
     background-color: #FEFEFE;
@@ -36,8 +35,9 @@ span.mat-button-wrapper {
 }
 
 .mat-card-image:first-child {
-    height: 20vh;
+    height: 8.4rem;
     object-fit: cover;
+    object-position: 0 50%;
 }
 
 .mat-card-title:not(:first-child) {

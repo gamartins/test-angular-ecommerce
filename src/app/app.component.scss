@@ -9,5 +9,11 @@
 }
 
 .content {
-    padding: 0 32px;
+    padding-left: 4%;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        padding: 0 32px;
+    }
 }

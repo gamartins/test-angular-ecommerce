@@ -8,8 +8,8 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="star start" fxLayoutGap="4%" class="content">
-  <app-card fxFlex="21%" *ngFor="let item of list; let i = index"
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="4%" class="content">
+  <app-card fxFlex="21%" fxFlex.sm="46%" fxFlex.xs="100%" *ngFor="let item of list; let i = index"
     [post]="item"
     (editEvent)="editItem(i)"
     (removeEvent)="removeItem(i)">
